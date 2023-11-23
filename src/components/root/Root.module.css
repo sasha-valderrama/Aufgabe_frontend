@@ -1,0 +1,13 @@
+.mainContent {
+  position: relative;
+  z-index: 88;
+  padding-top: var(--header-height);
+  background: hsl(var(--bg-primary));
+  border: var(--standard-border);
+  border-top: none;
+  border-bottom: none;
+  min-height: calc(100dvh - var(--footer-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

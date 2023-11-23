@@ -1,0 +1,105 @@
+/**
+ * Global CSS variables and styles for theming and typography.
+ * @root
+ */
+
+:root {
+  /* Colors in HSL format with new naming convention */
+  --clr-orange: 19 100% 51%;
+  --clr-green: 100 100% 50%;
+  --clr-yellow: 45 92% 62%;
+  --clr-blue: 220 100% 60%;
+  --clr-pink: 313 100% 50%;
+
+  --clr-primary: var(--clr-orange);
+  --clr-secondary: var(--clr-blue);
+  --clr-tertiary: var(--clr-green);
+  --clr-quaternary: var(--clr-pink);
+  --clr-accent: var(--clr-yellow);
+  --clr-black: 0 0% 0%;
+  --clr-white: 0 0% 100%;
+
+  /* General */
+  --clr-text: var(--clr-black);
+  --clr-accentText: var(--clr-white);
+  --bg-primary: var(--clr-primary);
+  --bg-secondary: var(--clr-secondary);
+
+  --bg-card: var(--clr-quaternary);
+  --bg-card-focus: var(--clr-white);
+  --bg-circles: var(--clr-quaternary);
+  --bg-letterBox: var(--clr-tertiary);
+  --bg-button: var(--clr-accent);
+  --bg-iconBox: var(--clr-white);
+  --bg-searchBar: var(--clr-white);
+
+  /* Typography */
+  --typography-factor: 1;
+
+  --fs-xxl: calc(3.6rem * var(--typography-factor)); /*57.6px*/
+  --fs-xl: calc(2.5rem * var(--typography-factor)); /*40px*/
+  --fs-lg: calc(1.2rem * var(--typography-factor)); /*19.2px*/
+  --fs-md: calc(1rem * var(--typography-factor)); /*16px*/
+  --fs-sm: calc(0.87rem * var(--typography-factor)); /*13.9px*/
+  --fs-xs: calc(0.62rem * var(--typography-factor)); /*9.9px*/
+  --fs-xxs: calc(0.5rem * var(--typography-factor)); /*8px*/
+
+  --ff-fallbacks: Arial, Helvetica, sans-serif;
+  --ff-body: 'Asul', var(--ff-fallbacks);
+  --ff-accentText: 'Michroma', var(--ff-fallbacks);
+
+  --fw-bold: 700;
+
+  /* Utils */
+  --header-height: 5rem;
+  --footer-height: 5rem;
+
+  --button-padding: 0.5em 1.5em;
+  --standard-padding: 1rem;
+  --icon-size: 4rem;
+  --scale-factor: 1.5;
+
+  /* Border Styling*/
+  --standard-border-radius: 0.6rem; /*10px*/
+  --standard-border-width: 0.28rem; /*4.48px*/
+  --standard-border-style: solid;
+  --standard-border-clr: var(--clr-black);
+  --standard-border: var(--standard-border-width) var(--standard-border-style)
+    hsl(var(--standard-border-clr));
+  --standard-box-shadow-rt: 2px 2px hsl(var(--clr-black));
+  --standard-box-shadow-lt: -2px 2px hsl(var(--clr-black));
+}
+
+/* Font definitions */
+@font-face {
+  font-family: 'Michroma';
+  src: url(../assets/fonts/Michroma/Michroma_Regular.woff2) format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Asul';
+  src: url(../assets/fonts/Asul/Asul_Regular.woff2) format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Asul';
+  src: url(../assets/fonts/Asul/Asul_700.woff2) format('woff2');
+  font-weight: 700;
+}
+
+/* Media queries for responsive typography adjustments */
+@media (width > 900px) {
+  :root {
+    --typography-factor: 1.25;
+  }
+}
+
+@media (width > 1300px) {
+  :root {
+    --typography-factor: 1.6;
+    /* For the scroll-container to show without problems */
+    --footer-height: 7rem;
+  }
+}

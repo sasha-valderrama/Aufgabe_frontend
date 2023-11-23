@@ -1,0 +1,12 @@
+:root {
+  --home-gap: 2rem;
+}
+.home {
+  height: 100%;
+  padding: var(--standard-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--home-gap);
+  justify-content:center;
+  
+}

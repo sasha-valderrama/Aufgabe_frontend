@@ -1,0 +1,32 @@
+:root {
+  --icon-rotate-position: 15deg;
+  --icon-transition-duration: 550ms;
+}
+
+.iconBox {
+  position: absolute;
+  right: 0;
+  bottom: -40%;
+  background: hsl(var(--bg-iconBox));
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
+  width: var(--icon-size);
+  height: var(--icon-size);
+  box-shadow: var(--standard-box-shadow-rt);
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(var(--icon-rotate-position));
+  transition: transform var(--icon-transition-duration) ease;
+  overflow: hidden;
+}
+
+.iconBox > img {
+  width: 100%;
+  height: 100%;
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}

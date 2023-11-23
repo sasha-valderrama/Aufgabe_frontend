@@ -1,0 +1,21 @@
+:root {
+  --circle-size: 1.5rem;
+  --circle-border: 0.25rem var(--standard-border-style) hsl(var(--clr-black));
+  --circle-gap: 0.5rem;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--circle-gap);
+}
+
+.circle {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  background: hsl(var(--bg-circles));
+  border: var(--circle-border);
+  box-shadow: var(--standard-box-shadow-lt);
+}

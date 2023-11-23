@@ -1,0 +1,30 @@
+:root {
+  --grid-max-columns: 4;
+  --column-width: 14rem;
+  --grid-gap: 2rem;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  padding: var(--standard-padding);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+}
+.grid_cards {
+  --standard-padding: 4rem;
+  max-width: calc(
+    var(--grid-max-columns) * (calc((var(--column-width) + var(--grid-gap))))
+  );
+  padding-top: var(--standard-padding);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--column-width));
+  gap: var(--grid-gap);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}

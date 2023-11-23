@@ -1,0 +1,63 @@
+:root {
+  --card-height: 20rem;
+  --card-thumbnail-height: 10rem;
+}
+
+.card {
+  min-width: 5rem;
+  width: 100%;
+  height: var(--card-height);
+  background: hsl(var(--bg-card));
+  border-radius: var(--standard-border-radius);
+  border: var(--standard-border);
+  box-shadow: var(--standard-box-shadow-lt);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  flex-shrink: 0;
+  transition: transform 80ms ease-in, background 120ms ease-in;
+}
+
+.thumbnail {
+  width: fit-content;
+  height: var(--card-thumbnail-height);
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
+  overflow: hidden;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.info_title {
+  font-family: var(--ff-card);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  color: hsl(var(--clr-white));
+}
+
+.info_price {
+  font-size: var(--fs-xs);
+  color: hsl(var(--clr-white));
+  font-weight: var(--fw-bold);
+}
+
+.card:hover {
+  transform: scale(0.95);
+  background: hsl(var(--bg-card-focus));
+}
+
+.card:hover .info_title,
+.card:hover .info_price {
+  color: hsl(var(--clr-black));
+}

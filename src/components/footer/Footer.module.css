@@ -1,0 +1,50 @@
+@import './../../keyframes.css';
+
+:root {
+  --footer-logo-size: 3rem;
+  --footer-rotate-animation-duration: 5000ms;
+  --footer-scroll-animation-duration: 50000ms;
+}
+
+.footer {
+  position: relative;
+  z-index: 999;
+  height: var(--footer-height);
+  background: hsl(var(--bg-primary));
+  border: var(--standard-border);
+  border-top: none;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  z-index: 99;
+  left: -1rem;
+  bottom: 1rem;
+  width: 120%;
+  height: 2rem;
+  background: hsl(var(--clr-green));
+  border: var(--standard-border);
+  transform: rotate(2deg);
+}
+
+.logo {
+  position: absolute;
+  top: -2.1rem;
+  right: 18%;
+  width: var(--footer-logo-size);
+  height: var(--footer-logo-size);
+  animation: rotate var(--footer-rotate-animation-duration) linear infinite;
+}
+
+.scroll_container {
+  height: 100%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.scroll_container p {
+  font-weight: 700;
+  animation: scrollText var(--footer-scroll-animation-duration) linear infinite both;
+}

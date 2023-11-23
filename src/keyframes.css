@@ -1,0 +1,49 @@
+/**
+ * CSS animations for the "LETTERBOX" component.
+ */
+
+/* Animation for moving from right to left */
+@keyframes moveRTL {
+  0%,
+  100% {
+    transform: rotate(var(--rotation-deg-lt));
+  }
+  50% {
+    transform: rotate(var(--rotation-deg-rt));
+  }
+}
+
+/* Animation for moving from left to right */
+@keyframes moveLTR {
+  0%,
+  100% {
+    transform: rotate(var(--rotation-deg-rt));
+  }
+  50% {
+    transform: rotate(var(--rotation-deg-lt));
+  }
+}
+
+/**
+ * CSS animations for the "FOOTER" component.
+ */
+
+/* Rotation animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scroll animation for text */
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

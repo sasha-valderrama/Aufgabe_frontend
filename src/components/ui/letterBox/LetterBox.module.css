@@ -1,0 +1,63 @@
+ @import './../../../keyframes.css';
+
+:root {
+  --box-size: 2rem;
+  --box-size-lg: calc(
+    var(--box-size) * var(--scale-factor)
+  ); /*devices's width > 500px*/
+  --letterBox-gap: 0.4em;
+  --rotation-deg-rt: 10deg;
+  --rotation-deg-lt: -10deg;
+  --letterBox-animation-duration: 3000ms; /*3s*/
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--letterBox-gap);
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: 0 auto;
+  padding: var(--standard-padding);
+}
+
+.letterBox {
+  width: var(--box-size);
+  height: var(--box-size);
+  background: hsl(var(--bg-letterBox));
+  box-shadow: var(--standard-box-shadow-rt);
+  border-radius: var(--standard-border-radius);
+  border: var(--standard-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-md);
+  transform: translateZ(0);  /*forces animation on mobile devices*/
+}
+
+.spaceBox {
+  width: var(--box-width);
+  height: var(--box-width);
+  background: transparent;
+  border: none;
+}
+
+.letterBox:nth-child(even) {
+  transform: rotate(var(--rotation-deg-rt));
+  animation: moveRTL var(--letterBox-animation-duration) ease-in-out both;
+}
+
+.letterBox:nth-child(odd) {
+  transform: rotate(var(--rotation-deg-lt));
+  animation: moveLTR var(--letterBox-animation-duration) ease-in-out both;
+}
+
+@media (width> 500px) {
+  .letterBox {
+    width: var(--box-size-lg);
+    height: var(--box-size-lg);
+  }
+}

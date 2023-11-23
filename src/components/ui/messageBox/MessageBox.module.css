@@ -1,0 +1,22 @@
+.container {
+  color: hsl(var(--clr-accentText));
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.MessageBoxText {
+  font-family: var(--ff-accentText);
+  font-size: var(--fs-md);
+}
+
+.accentText {
+  --standard-border-radius: 25px;
+  color: hsl(var(--clr-text));
+  background-color: hsl(var(--clr-accent));
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  border-radius: var(--standard-border-radius);
+  border: var(--standard-border);
+  font-weight: var(--fw-bold);
+}

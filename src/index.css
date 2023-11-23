@@ -1,0 +1,42 @@
+/**
+ * Global styles for the application.
+ */
+
+ /*Importing variables for consistent theming.*/
+@import './variables.css';
+
+/* Resetting default padding, margin, and box-sizing for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Setting the height of the body and HTML to 100% */
+body,
+html {
+  height: 100%;
+}
+
+/* Setting a base line-height for better readability */
+body {
+  line-height: 2;
+}
+
+/* Cursor properties for the entire body */
+body {
+  cursor: url('../assets/cursor/cursor_default.png') 30 30, auto;
+  font-family: var(--ff-body);
+}
+
+/* Hover effect for buttons and elements with a custom cursor */
+button:hover,
+.custom-element-cursor:hover {
+  cursor: url('../assets/cursor/cursor_hover.png') 10 10, pointer;
+}
+
+/* Cursor and pointer events for input fields */
+input {
+  cursor: url('../assets/cursor/cursor_typing.png') 30 30, text;
+  pointer-events: auto; /*Make sure to be target for mouse events*/
+}
